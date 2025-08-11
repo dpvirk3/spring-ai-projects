@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-ai-rag-ollama
+  ai:
+    model:
+      chat: gemma3
+    ollama:
+      base-url: http://localhost:11434
+      pull-model-strategy: never
+      chat:
+        options:
+          model: gemma3
+          auto-pull-enabled: true
+server:
+  port: 9090
+com:
+  dv:
+    aiapp:
+      vectorStorePath: "c:\\temp\\vectorstore.json"
+      documentsToLoad:
+        - classpath:/movies500.csv
