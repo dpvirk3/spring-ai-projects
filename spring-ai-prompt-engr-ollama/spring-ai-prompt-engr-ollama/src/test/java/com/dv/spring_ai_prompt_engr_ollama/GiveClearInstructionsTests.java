@@ -42,14 +42,14 @@ public class GiveClearInstructionsTests extends  BaseTestClass {
     //ask the model to check if conditions are satisfied
     String directionsPrompt = """
             You will be provided with text delimited by triple quotes.
-            If it contains a sequence of instructions,
+            ONLY IF contains a SEQUENCE OF INSTRUCTIONS,
             re-write those instructions in the following format:
                         
             Step 1 - ...
             Step 2 - ...
             Step N - ...
                         
-            If the text does not contain a sequence of instructions, then simply write \\"No steps provided.\\"
+            If the text does NOT contain a SEQUENCE OF INSTRUCTIONS, then simply write \\"No steps provided.\\"
                         
             \\"\\"\\"{text_1}\\"\\"\\"
             """;
@@ -79,6 +79,7 @@ public class GiveClearInstructionsTests extends  BaseTestClass {
         System.out.println(chatmodel.call(promptTemplate.create(Map.of("text_1", cookASteak))).getResult().getOutput().getText());
     }
 
+    //gemma3 fail! it still writes as steps where there are none in the book description
     @Test
     void testBookDescription() {
         PromptTemplate promptTemplate = new PromptTemplate(directionsPrompt);
