@@ -24,7 +24,7 @@ public class OllamaServiceImpl implements OllamaService {
     private final OllamaChatModel chatModel;
     private final VectorStore vectorStore;
 
-    @Value("classpath:/templates/rag-prompt-template.st")
+    @Value("classpath:/templates/rag-prompt-template-meta.st")
     private Resource ragPromptTemplate;
 
     public OllamaServiceImpl (OllamaChatModel chatModel, VectorStore vectorStore) {
