@@ -13,12 +13,7 @@ public class VectorStoreProperties {
 
     private String vectorStorePath;
 
-    public void setDocumentsToLoad(List<Resource> documentsToLoad) {
-        this.documentsToLoad = documentsToLoad;
-    }
-
     private List<Resource> documentsToLoad;
-
 
     public String getVectorStorePath() {
         return this.vectorStorePath;
@@ -27,6 +22,11 @@ public class VectorStoreProperties {
     public void setVectorStorePath(String vectorStorePath1) {
         this.vectorStorePath=vectorStorePath1;
     }
+
+    public void setDocumentsToLoad(List<Resource> documentsToLoad) {
+        this.documentsToLoad = documentsToLoad;
+    }
+
 
     public List<Resource> getDocumentsToLoad() {
         return documentsToLoad;

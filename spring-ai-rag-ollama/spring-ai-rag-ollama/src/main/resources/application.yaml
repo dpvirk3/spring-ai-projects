@@ -18,4 +18,4 @@ com:
     aiapp:
       vectorStorePath: "c:\\temp\\vectorstore.json"
       documentsToLoad:
-        - classpath:/movies500.csv
+        - classpath:/movies20.csv
