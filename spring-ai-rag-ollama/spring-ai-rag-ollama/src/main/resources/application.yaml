@@ -16,6 +16,6 @@ server:
 com:
   dv:
     aiapp:
-      vectorStorePath: "c:\\temp\\vectorstore.json"
+      vectorStorePath: "c:\\temp\\vectorstore_500_trimmed.json"
       documentsToLoad:
-        - classpath:/movies20.csv
+        - classpath:/movies500_trimmed.csv

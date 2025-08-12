@@ -35,7 +35,7 @@ public class OllamaConfig {
                 .ollamaApi(ollamaApi)
                 .defaultOptions(
                         OllamaOptions.builder()
-                                .model("llama2")
+                                .model("jeffh/intfloat-e5-base-v2:f16")
                                 .build()
                 ).build();
 
